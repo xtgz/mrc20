@@ -1,0 +1,20 @@
+{
+  "name": "mrc20",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mint.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@mysten/bcs": "^0.9.1",
+    "@mysten/sui.js": "^0.48.1",
+    "ini": "^4.1.1"
+  }
+}
