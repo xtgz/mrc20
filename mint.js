@@ -42,7 +42,7 @@ async function inscribe(seed) {
   while (inscribed < count) {
     try {
       const tx = new TransactionBlock();
-      const [gas] = tx.splitCoins(tx.gas, [tx.pure(1e9 * 0.1)])
+      const [gas] = tx.splitCoins(tx.gas, [tx.pure(1e9 * 0)])
       tx.moveCall({
         target: `${packageObjectId}::movescription::mint`,
         arguments: [
