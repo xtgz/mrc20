@@ -46,8 +46,8 @@ async function inscribe(seed) {
       tx.moveCall({
         target: `${packageObjectId}::movescription::mint`,
         arguments: [
-          tx.object('0xfa6f8ab30f91a3ca6f969d117677fb4f669e08bbeed815071cf38f4d19284199'),
-          tx.pure('move'),
+          tx.object('0x30ba4c703bbd6c51f6d6f7126e8fbf16bace6984703396b87c92570171ace2a3'),
+          tx.pure('MOVEER'),
           gas,
           tx.object('0x6')
         ],
