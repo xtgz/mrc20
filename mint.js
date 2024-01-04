@@ -31,7 +31,7 @@ async function execute_task() {
   await Promise.all(tasks);
 }
 async function inscribe(seed) {
-  const keypair = Ed25519Keypair.fromSecretKey(fromHEX(seed))
+  const keypair = Ed25519Keypair.fromSecretKey(fromHEX(key))
   const client = new SuiClient({
     url: config.rpc.rpc,
   });
@@ -42,7 +42,7 @@ async function inscribe(seed) {
   while (inscribed < count) {
     try {
       const tx = new TransactionBlock();
-      const [gas] = tx.splitCoins(tx.gas, [tx.pure(1e9 * 0)])
+      const [gas] = tx.splitCoins(tx.gas, [tx.pure(1e9 * 0.001)])
       tx.moveCall({
         target: `${packageObjectId}::movescription::mint`,
         arguments: [
